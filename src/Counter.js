@@ -7,7 +7,7 @@ import { dec } from './state/counter'
 
 
 const mapStateToProps = state => ({
-    currentValue: state.counter.counter
+    currentValue: state.counterReducerName.counter
 
 })
 
