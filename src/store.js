@@ -1,9 +1,9 @@
-import { combineReducers, createStore } from 'redux'
+import { createStore } from 'redux'
 
 
 
  const reducer =  () => ({
-costam
+name: 'ala'
  })
 
 
@@ -14,3 +14,7 @@ costam
     window.__REDUX_DEVTOOLS_EXTENSION__()
 
 )
+
+store.dispatch({
+    type: "FIRST_ACTION"
+})
