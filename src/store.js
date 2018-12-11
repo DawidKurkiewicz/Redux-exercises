@@ -6,11 +6,20 @@ const INITIAL_STATE = {
 
 const reducer = (state = INITIAL_STATE, action) => {
     if (action.type === "FIRST_ACTION") {
-        return { firstAction: true }
+        return {
+            ...state,
+            firstAction: true
+        }
     }
     return state
 }
 
+const FIRST_ACTION = "FIRST_ACTION"
+
+
+const firstAction = () => ({
+type: FIRST_ACTION
+})
 
 export const store = createStore(
     reducer,
@@ -22,3 +31,10 @@ export const store = createStore(
 store.dispatch({
     type: "FIRST_ACTION"
 })
+
+window.dispatchFirstAction= () => store.dispatch(firstAction())
+
+window.dispatchFirstAction()
+window.dispatchFirstAction()
+window.dispatchFirstAction()
+window.dispatchFirstAction()
