@@ -1,12 +1,14 @@
 import { createStore } from 'redux'
 
+const INITIAL_STATE = {
+    firstAction: false
+}
 
-
-const reducer = (state, action) => {
+const reducer = (state = INITIAL_STATE, action) => {
     if (action.type === "FIRST_ACTION") {
         return { firstAction: true }
     }
-    return { firstAction: false }
+    return state
 }
 
 
